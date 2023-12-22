@@ -12,3 +12,8 @@ This application uses MVVM for the views.
 
 # Design Patterns
 Async await.
+
+# Screenshots
+
+|List of All Characters|DetailScreen|
+|---|---|
