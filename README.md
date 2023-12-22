@@ -1,4 +1,4 @@
-#AppolyTechnicalChallenge
+# AppolyTechnicalChallenge
 The AppolyTechnicalChallenge displays a list of Harry Potter characters from the API.
 
 # Installation
