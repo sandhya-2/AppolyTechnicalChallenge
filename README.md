@@ -4,7 +4,7 @@ The AppolyTechnicalChallenge displays a list of Harry Potter characters from the
 # Installation
 Can be used with Xcode 15.1.
 
-#Framework
+# Framework
 SwiftUI
 
 # Architecture
