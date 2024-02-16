@@ -13,20 +13,24 @@ struct CharacterListView: View {
     
     var body: some View {
         
-        VStack {
-            
-            List(viewModel.characters, id: \.id){ item in
-                NavigationLink(destination: DetailView(character: item)) {
-                    CustomCellView(character: item)
-                        .font(.subheadline)
+        NavigationStack {
+            VStack (alignment: .leading){
+                List {
+                    ForEach(viewModel.filteredCharacters) { character in
+                        NavigationLink(destination: DetailView(character: character)) {
+                            CustomCellView(character: character)
+                                .font(.subheadline)
+                        }
+                    }
                 }
-                
-                
-            }.onAppear {
-                Task {
+                .navigationTitle("All Characters")
+                .searchable(text: $viewModel.searchText)
+                .task {
                     await viewModel.getAllCharacters(for: .allCharacters)
                 }
-            }.navigationTitle("All Characters")
+                
+            }
+            
         }
         
     }

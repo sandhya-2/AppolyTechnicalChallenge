@@ -10,22 +10,19 @@ import SwiftUI
 struct CustomCellView: View {
     let character: CharacterResponse
     var body: some View {
-        HStack{
+
+        HStack {
             
-            AsyncImage(url: URL(string: character.image)) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .padding(10)
-                    .cornerRadius(10)
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 50, height: 50)
-            .cornerRadius(10)
+            ImageView(character: character)
+                .frame(width: 60, height: 60)
+                .cornerRadius(10)
+                .padding(.trailing, 10)
+               
+            
             Text(character.name)
+                .padding(5)
         }
-        .padding(8)
+        
     }
 }
 

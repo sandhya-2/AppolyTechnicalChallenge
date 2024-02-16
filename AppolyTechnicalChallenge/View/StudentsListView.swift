@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct StudentsListView: View {
     
     @StateObject var viewModel: CharacterViewModel = CharacterViewModel(networkManager: NetworkManager())
@@ -26,7 +25,6 @@ struct StudentsListView: View {
             }
         }
         
-    
 }
 
 #Preview {

@@ -8,30 +8,20 @@
 import Foundation
 @testable import AppolyTechnicalChallenge
 
-class MockNetworkManager {
-//    TODO 
-    func getDataFromAPI(for type: String, house: String? = nil) async throws -> Data {
-        var resourceName: String
-        
-        switch type {
-        case "characters", "students", "staff":
-            resourceName = "Characters"
-        case "house":
-            if let house = house {
-                resourceName = "House"
-            } else {
-                throw NetworkError.invalidURL
-            }
-        default:
-            throw NetworkError.invalidURL
-        }
-        
-        guard let path = Bundle.main.url(forResource: resourceName, withExtension: "json"),
-              let data = try? Data(contentsOf: path) else {
+/*MockNetworkManager that behaves like NetworkManager for testing ViewModel*/
+class MockNetworkManager: Networkable {
+    
+    func get(url: URL) async throws -> Data {
+        do {
+            let bundle = Bundle(for: MockNetworkManager.self)
+            guard let resourcePath = bundle.url(forResource: url.absoluteString, withExtension: "json") else
+            {
+                throw NetworkError.invalidURL            }
+            let data = try Data(contentsOf: resourcePath)
+            return data
+        } catch {
             throw NetworkError.dataNotFound
         }
-        
-        return data
     }
-
 }
+

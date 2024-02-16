@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA62846B2B7FB43200919119 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62846A2B7FB43200919119 /* CacheAsyncImage.swift */; };
+		FA62846D2B7FB45900919119 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62846C2B7FB45900919119 /* ImageCache.swift */; };
+		FA62846F2B7FB4A700919119 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62846E2B7FB4A700919119 /* Networking.swift */; };
+		FA6284712B7FB59900919119 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6284702B7FB59900919119 /* ImageView.swift */; };
+		FA6284732B7FB60500919119 /* MockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6284722B7FB60500919119 /* MockNetworking.swift */; };
 		FAC302E02B33926C00E18BA8 /* AppolyTechnicalChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC302DF2B33926C00E18BA8 /* AppolyTechnicalChallengeApp.swift */; };
 		FAC302E22B33926C00E18BA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC302E12B33926C00E18BA8 /* ContentView.swift */; };
 		FAC302E42B33927700E18BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC302E32B33927700E18BA8 /* Assets.xcassets */; };
@@ -58,6 +63,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA62846A2B7FB43200919119 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
+		FA62846C2B7FB45900919119 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		FA62846E2B7FB4A700919119 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		FA6284702B7FB59900919119 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		FA6284722B7FB60500919119 /* MockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
 		FAC302DC2B33926C00E18BA8 /* AppolyTechnicalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppolyTechnicalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC302DF2B33926C00E18BA8 /* AppolyTechnicalChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppolyTechnicalChallengeApp.swift; sourceTree = "<group>"; };
 		FAC302E12B33926C00E18BA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,9 +129,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA6284692B7FB41600919119 /* CacheImage */ = {
+			isa = PBXGroup;
+			children = (
+				FA62846A2B7FB43200919119 /* CacheAsyncImage.swift */,
+				FA62846C2B7FB45900919119 /* ImageCache.swift */,
+			);
+			path = CacheImage;
+			sourceTree = "<group>";
+		};
+		FA6284742B7FB61D00919119 /* NetworkManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAD9AEE82B35F783008423EB /* NetworkManagerTests.swift */,
+			);
+			path = NetworkManagerTests;
+			sourceTree = "<group>";
+		};
+		FA6284752B7FB64700919119 /* CharacterViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAD9AEF22B35FF01008423EB /* CharacterViewModelTests.swift */,
+			);
+			path = CharacterViewModelTests;
+			sourceTree = "<group>";
+		};
 		FAC302D32B33926C00E18BA8 = {
 			isa = PBXGroup;
 			children = (
+				FA6284692B7FB41600919119 /* CacheImage */,
 				FAC302DE2B33926C00E18BA8 /* AppolyTechnicalChallenge */,
 				FAC302E32B33927700E18BA8 /* Assets.xcassets */,
 				FAC302EF2B33927800E18BA8 /* AppolyTechnicalChallengeTests */,
@@ -165,9 +201,9 @@
 			children = (
 				FAD9AEE32B35F4AF008423EB /* Stub */,
 				FAD9AEE22B35F4A5008423EB /* Mock */,
+				FA6284742B7FB61D00919119 /* NetworkManagerTests */,
+				FA6284752B7FB64700919119 /* CharacterViewModelTests */,
 				FAC302F02B33927800E18BA8 /* AppolyTechnicalChallengeTests.swift */,
-				FAD9AEE82B35F783008423EB /* NetworkManagerTests.swift */,
-				FAD9AEF22B35FF01008423EB /* CharacterViewModelTests.swift */,
 			);
 			path = AppolyTechnicalChallengeTests;
 			sourceTree = "<group>";
@@ -208,6 +244,7 @@
 				FAD9AEDA2B35D222008423EB /* SlytherinView.swift */,
 				FAD9AEDE2B35D80A008423EB /* CustomCellView.swift */,
 				FAD9AEE02B35E2D6008423EB /* DetailView.swift */,
+				FA6284702B7FB59900919119 /* ImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +263,7 @@
 				FAC303212B349C8400E18BA8 /* NetworkManager.swift */,
 				FAC303252B34A85E00E18BA8 /* APIEndpoint.swift */,
 				FAC303272B34AACF00E18BA8 /* NetworkError.swift */,
+				FA62846E2B7FB4A700919119 /* Networking.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -234,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD9AEE62B35F555008423EB /* MockNetworkManager.swift */,
+				FA6284722B7FB60500919119 /* MockNetworking.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -379,9 +418,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6284712B7FB59900919119 /* ImageView.swift in Sources */,
 				FAD9AED52B35CE48008423EB /* GryffindorView.swift in Sources */,
 				FAC302E22B33926C00E18BA8 /* ContentView.swift in Sources */,
 				FAC303282B34AACF00E18BA8 /* NetworkError.swift in Sources */,
+				FA62846F2B7FB4A700919119 /* Networking.swift in Sources */,
 				FAC302E02B33926C00E18BA8 /* AppolyTechnicalChallengeApp.swift in Sources */,
 				FAC3031C2B34973200E18BA8 /* StudentsListView.swift in Sources */,
 				FAC3032A2B35225900E18BA8 /* HouseScreen.swift in Sources */,
@@ -394,8 +435,10 @@
 				FAC303102B3484B100E18BA8 /* WelcomeScreen.swift in Sources */,
 				FAC303182B34934F00E18BA8 /* OptionButtonView.swift in Sources */,
 				FAD9AEDF2B35D80A008423EB /* CustomCellView.swift in Sources */,
+				FA62846D2B7FB45900919119 /* ImageCache.swift in Sources */,
 				FAD9AED72B35D187008423EB /* HufflepuffView.swift in Sources */,
 				FAD9AEDB2B35D222008423EB /* SlytherinView.swift in Sources */,
+				FA62846B2B7FB43200919119 /* CacheAsyncImage.swift in Sources */,
 				FAC3032C2B35242200E18BA8 /* HouseButtonView.swift in Sources */,
 				FAC303142B3485DD00E18BA8 /* MenuScreenView.swift in Sources */,
 				FAC3031E2B34974700E18BA8 /* StaffListView.swift in Sources */,
@@ -409,6 +452,7 @@
 			files = (
 				FAD9AEF32B35FF01008423EB /* CharacterViewModelTests.swift in Sources */,
 				FAD9AEE92B35F783008423EB /* NetworkManagerTests.swift in Sources */,
+				FA6284732B7FB60500919119 /* MockNetworking.swift in Sources */,
 				FAD9AEE72B35F555008423EB /* MockNetworkManager.swift in Sources */,
 				FAC302F12B33927800E18BA8 /* AppolyTechnicalChallengeTests.swift in Sources */,
 			);
