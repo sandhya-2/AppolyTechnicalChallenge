@@ -15,5 +15,7 @@ Async await.
 
 # Screenshots
 
-|List of All Characters|DetailScreen|
-|---|---|
+|Home Screen|List of All Characters|DetailScreen|
+|---|---|---|
+|![alt text](http://url/to/Users/macbook/Desktop/HomeScreen.png)|
+
